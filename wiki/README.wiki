@@ -1,0 +1,40 @@
+#summary One-sentence summary of this page.
+
+= Introduction =
+
+We provide three files here: the dynamic pipeline algorithm written in Java, a sample tool registry file, and a sample interface program written in PHP.
+
+
+= Requirements for the Java Algorithm =
+
+  * Library jgrapht-0.8.1
+
+  * Directory hierarchy (required beforehand):
+
+  dynamicpipeline/java/
+
+  dynamicpipeline/java/jgrapht-0.8.1/  
+
+  dynamicpipeline/registry/
+
+  dynamicpipeline/scripts/
+
+  All with read+exec permissions
+
+  * Directory hierarchy (created on execution):
+  dynamicpipeline/inputs/
+  dynamicpipeline/pipelines/  
+  
+  All with read+exec+write permissions
+
+  * Complementary files:
+  scripts.txt (on dynamicpipeline/registry/)
+ 
+  With read+exec+write permission
+
+
+= Requirements for the PHP Interface =
+
+  * Configure index.php classpath with absolute path:
+
+  "/xxx/dynamicpipeline/java/jgrapht-0.8.1/jgrapht-jdk1.6.jar:/xxx/dynamicpipeline/java/"
