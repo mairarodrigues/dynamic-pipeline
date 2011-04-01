@@ -1,8 +1,8 @@
-#summary One-sentence summary of this page.
+#summary Instructions for running the dynamic pipeline algorithm.
 
 = Introduction =
 
-We provide three files here: the dynamic pipeline algorithm written in Java, a sample tool registry file, and a sample interface program written in PHP.
+So far, in the dynamic pipeline project we provide three files: the dynamic pipeline algorithm written in Java, a sample tool registry file in xml, and a sample interface program written in PHP. Requirements for using these files are below. 
 
 
 = Requirements for the Java Algorithm =
