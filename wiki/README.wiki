@@ -2,7 +2,7 @@
 
 = Introduction =
 
-So far, in the dynamic pipeline project we provide three files: the dynamic pipeline algorithm written in Java, a sample tool registry file in xml, and a sample interface program written in PHP. Requirements for using these files are below. 
+So far, in the dynamic pipeline project we provide four files: the dynamic pipeline algorithm written in Java, the available pipelines algorithm written in Java, a sample tool registry file in xml, and a sample interface program written in PHP. Requirements for using these files are below. 
 
 
 = Requirements for the Java Algorithm =
@@ -17,7 +17,7 @@ So far, in the dynamic pipeline project we provide three files: the dynamic pipe
 
   dynamicpipeline/registry/
 
-  dynamicpipeline/scripts/
+  dynamicpipeline/tools/
 
   All with read+exec permissions
 
@@ -28,13 +28,41 @@ So far, in the dynamic pipeline project we provide three files: the dynamic pipe
   All with read+exec+write permissions
 
   * Complementary files:
-  scripts.txt (on dynamicpipeline/registry/)
+  ToolRegistry.txt (on dynamicpipeline/registry/)
  
   With read+exec+write permission
 
+= How to Run the Java Executables =
+
+ * linux:   java -cp ":/xxx/dynamicpipeline/java/jgrapht-0.8.1/jgrapht-jdk1.6.jar:/xxx/dynamicpipeline/java/" SetPipeline
+ * windows: java -cp xxx\dynamicpipeline\java\jgrapht-0.8.1\jgrapht-jdk1.6.jar;xxx\dynamicpipeline\java\ SetPipeline
+
+Same for class "AvailablePipelines".
 
 = Requirements for the PHP Interface =
 
   * Configure index.php classpath with absolute path:
 
   "/xxx/dynamicpipeline/java/jgrapht-0.8.1/jgrapht-jdk1.6.jar:/xxx/dynamicpipeline/java/"
+
+= Outputs =
+
+The SetPipeline class returns the path for four output files, in this order:
+
+pipeline<timestamp>.inputs
+pipeline<timestamp>.exec
+pipeline<timestamp>.outputs
+pipeline<timestamp>.err
+
+OR
+
+There is no available path.
+
+These files are stored in the folder "pipelines/".
+It also generates two other output files and creates a pipeline-specific folder inside the folder "pipelines/":
+
+pipeline<timestamp>.txt
+pipeline<timestamp>.log
+<timestamp>/
+
+The AvailablePipelines class returns a comma-delimited String of end points with available path from input_format.
