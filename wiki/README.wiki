@@ -60,9 +60,9 @@ There is no available path.
 
 These files are stored in the folder "pipelines/".
 It also generates two other output files and creates a pipeline-specific folder inside the folder "pipelines/":
-
+{{{
 pipeline<timestamp>.txt
 pipeline<timestamp>.log
 <timestamp>/
-
+}}}
 The AvailablePipelines class returns a comma-delimited String of end points with available path from input_format.
