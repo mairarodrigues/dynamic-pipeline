@@ -34,8 +34,14 @@ So far, in the dynamic pipeline project we provide four files: the dynamic pipel
 
 = How to Run the Java Executables =
 
- * linux:   java -cp ":/xxx/dynamicpipeline/java/jgrapht-0.8.1/jgrapht-jdk1.6.jar:/xxx/dynamicpipeline/java/" SetPipeline
- * windows: java -cp xxx\dynamicpipeline\java\jgrapht-0.8.1\jgrapht-jdk1.6.jar;xxx\dynamicpipeline\java\ SetPipeline
+ * linux:   
+{{{
+java -cp ":/xxx/dynamicpipeline/java/jgrapht-0.8.1/jgrapht-jdk1.6.jar:/xxx/dynamicpipeline/java/" SetPipeline
+}}}
+ * windows: 
+{{{
+java -cp xxx\dynamicpipeline\java\jgrapht-0.8.1\jgrapht-jdk1.6.jar;xxx\dynamicpipeline\java\ SetPipeline
+}}}
 
 Same for class "AvailablePipelines".
 
