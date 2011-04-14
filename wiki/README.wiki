@@ -49,10 +49,10 @@ Same for class "AvailablePipelines".
 
 The SetPipeline class returns the path for four output files, in this order:
 
-pipeline<timestamp>.inputs
-pipeline<timestamp>.exec
-pipeline<timestamp>.outputs
-pipeline<timestamp>.err
+'pipeline<timestamp>.inputs'
+'pipeline<timestamp>.exec'
+'pipeline<timestamp>.outputs'
+'pipeline<timestamp>.err'
 
 OR
 
