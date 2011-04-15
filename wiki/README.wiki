@@ -2,7 +2,7 @@
 
 = Introduction =
 
-So far, in the dynamic pipeline project we provide four files: the dynamic pipeline algorithm written in Java, the available pipelines algorithm written in Java, a sample tool registry file in xml, and a sample interface program written in PHP. Requirements for using these files are below. 
+To run a dynamic pipeline project we provide four files: (1) the dynamic pipeline algorithm written in Java (SetPipeline), (2) the available pipelines algorithm written in Java (AvailablePipelines), (3) a sample tool registry file (ToolRegistry.txt), and (4) a sample interface program written in PHP (index.php). Requirements for using these files are below. 
 
 
 = Requirements for the Java Algorithm =
