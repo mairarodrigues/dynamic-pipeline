@@ -34,6 +34,7 @@ So far, in the dynamic pipeline project we provide four files: the dynamic pipel
 
 = How to Run the Java Executables =
 
+Java executables should be run from the "dynamicpipeline/java/" directory. 
  * linux:   
 {{{
 java -cp ":/xxx/dynamicpipeline/java/jgrapht-0.8.1/jgrapht-jdk1.6.jar:/xxx/dynamicpipeline/java/" SetPipeline
@@ -43,7 +44,7 @@ java -cp ":/xxx/dynamicpipeline/java/jgrapht-0.8.1/jgrapht-jdk1.6.jar:/xxx/dynam
 java -cp xxx\dynamicpipeline\java\jgrapht-0.8.1\jgrapht-jdk1.6.jar;xxx\dynamicpipeline\java\ SetPipeline
 }}}
 
-Same for class "AvailablePipelines".
+Where "xxx" is the absolute path on your machine. Use the same command for class "AvailablePipelines".
 
 = Requirements for the PHP Interface =
 
