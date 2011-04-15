@@ -47,9 +47,12 @@ Same for class "AvailablePipelines".
 
 = Requirements for the PHP Interface =
 
-  * Configure index.php classpath with absolute path:
+  * Configure index.php javaclasspath according to your operating system:
+{{{
+  "$path/jgrapht-0.8.1/jgrapht-jdk1.6.jar:$path"
+}}}
+Substitute ":" by ";" if you are using Windows. For Linux, no change is needed.
 
-  "/xxx/dynamicpipeline/java/jgrapht-0.8.1/jgrapht-jdk1.6.jar:/xxx/dynamicpipeline/java/"
 
 = Outputs =
 
