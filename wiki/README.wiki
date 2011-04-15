@@ -46,6 +46,8 @@ java -cp xxx\dynamicpipeline\java\jgrapht-0.8.1\jgrapht-jdk1.6.jar;xxx\dynamicpi
 
 Where "xxx" is the absolute path on your machine. Use the same command for class "AvailablePipelines".
 
+Before running the java programs you must (i) populate the folder "tools/" with the tools you want to include in your pipeline system; and (ii) instantiate the Tool Registry (registry/ToolRegistry.txt) with information about those tools. Read the document on the Wiki section about how to incorporate your tools.
+
 = Requirements for the PHP Interface =
 
   * Configure index.php javaclasspath according to your operating system:
