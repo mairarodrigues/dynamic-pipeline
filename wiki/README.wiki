@@ -75,7 +75,7 @@ pipeline<timestamp>.txt
 pipeline<timestamp>.log
 <timestamp>/
 }}}
-The AvailablePipelines class returns a comma-delimited String of possible end points with available paths from a specific start point (or input_format). Example of possible conversion formats for the start point format SDAT:
+The AvailablePipelines class returns a comma-delimited String of possible end points with available paths from a specific start point (or input_format). Example of output, referring to possible conversion formats for the start point format SDAT:
 {{{
 PrettyBase,SDAT,PHASE_Format,NEXUS,Structure_Format,R_Genetics,R_Hierfstat
 }}}
