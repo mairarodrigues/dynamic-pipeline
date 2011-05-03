@@ -29,7 +29,10 @@ Example:
 
 This entry describes a tool `scriptname.pl` writen in `Perl` that performs some processing on `File1` and generates `File2`, and requires an extra input file `File3`. Its performance measure is `0.25` (see the Section Performance Measure on how to determine it).
 
+==Performance Measure==
 
+
+=Standards for each Tool=
 
 {{{
 > perl xxx.pl <input> <output>
