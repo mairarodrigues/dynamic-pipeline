@@ -27,7 +27,7 @@ Example:
 ||#INPUT||OUTPUT ||TOOL||LANGUAGE||CODE||DEPENDENCIES||SUBPRODUCTS||PERFORMANCE||OBSERVATIONS||PROVIDER||CONTACT||
 ||File1||File2 ||scriptname.pl||Perl||01||File3||-||0.25||-||John Smith||john@mail||
 
-This entry describes a tool `scriptname.pl` writen in 'Perl' that performs some processing on 'File1' and generates 'File2', and requires an extra input file 'File3'. Its performance measure is '0.25' (see the Section Performance Measure on how to determine it).
+This entry describes a tool `scriptname.pl` writen in `Perl` that performs some processing on `File1` and generates `File2`, and requires an extra input file `File3`. Its performance measure is `0.25` (see the Section Performance Measure on how to determine it).
 
 
 
