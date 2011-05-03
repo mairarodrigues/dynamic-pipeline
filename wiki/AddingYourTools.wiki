@@ -25,7 +25,6 @@ All information about the tools that are part of the pipeline system is stored i
 
 Example:
 ||#INPUT||OUTPUT ||SCRIPT||LANGUAGE||CODE||DEPENDENCIES||SUBPRODUCTS||PERFORMANCE||OBSERVATIONS||PROVIDER||CONTACT||
-
 ||File1||File2 ||scriptname.pl||Perl||01||File3||-||0.25||-||John Smith||john@mail||
 
 
