@@ -2,10 +2,16 @@
 
 = Introduction =
 
-Add your content here.
+To use the dynamic pipeline system you must add your own tools to the system. These tools are the ones to be considered for pipeline generation. It is recommended that your tools are, in some degree, compatible in terms of inputs and outputs, so that their combination in a pipeline is possible.
+
+To add your tools to the dynamic pipeline system you will need to:
+   1. populate the folder "tools/" with the tools you want to include in your pipeline system; and
+   2. instantiate the Tool Registry (registry/ToolRegistry?.txt) with information about those tools. 
+
+= The Tool Registry =
 
 
-= Details =
+
 
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
