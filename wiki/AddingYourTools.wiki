@@ -23,6 +23,8 @@ All information about the tools that are part of the pipeline system is stored i
  * the provider's name (Provider); and
  * the provider's contact (Contact).
 
+Example:
+||#INPUT||OUTPUT ||SCRIPT||LANGUAGE||CODE||DEPENDENCIES||SUBPRODUCTS||PERFORMANCE||OBSERVATIONS||PROVIDER||CONTACT||
 
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
