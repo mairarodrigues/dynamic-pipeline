@@ -26,6 +26,10 @@ All information about the tools that are part of the pipeline system is stored i
 Example:
 ||#INPUT||OUTPUT ||SCRIPT||LANGUAGE||CODE||DEPENDENCIES||SUBPRODUCTS||PERFORMANCE||OBSERVATIONS||PROVIDER||CONTACT||
 
+{{{
+> perl xxx.pl <input> <output>
+}}}
+
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
   * Headings, paragraphs, and lists
