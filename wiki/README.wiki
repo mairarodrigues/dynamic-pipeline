@@ -31,6 +31,11 @@ To run the dynamic pipeline project you need: (1) the dynamic pipeline directory
  
   With read+exec+write permission
 
+
+*ATENTION:* before running the java programs you must 
+ # populate the folder "tools/" with the tools you want to include in your pipeline system; and 
+ # instantiate the Tool Registry (registry/ToolRegistry.txt) with information about those tools. Read the document on the Wiki section about how to incorporate your tools.
+
 = How to Run the Java Executables =
 
 Java executables should be run from the "dynamicpipeline/java/" directory. 
@@ -45,7 +50,6 @@ java -cp xxx\dynamicpipeline\java\jgrapht-0.8.1\jgrapht-jdk1.6.jar;xxx\dynamicpi
 
 Where "xxx" is the absolute path on your machine. Use the same command for class "AvailablePipelines".
 
-Before running the java programs you must (i) populate the folder "tools/" with the tools you want to include in your pipeline system; and (ii) instantiate the Tool Registry (registry/ToolRegistry.txt) with information about those tools. Read the document on the Wiki section about how to incorporate your tools.
 
 = Requirements for the PHP Interface =
 
