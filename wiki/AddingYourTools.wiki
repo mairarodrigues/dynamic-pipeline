@@ -30,7 +30,7 @@ Example:
 ||!FileType2||!FileType5 ||toolZ.pl||Perl||03||!FileType9,!FileType8||-||3.20||-||Paul||paul@mail||
 
 
-The first entry describes a tool `toolX.pl` written in `Perl` that performs some processing on `FileType1` and generates `FileType2`, and requires an extra input file `FileType3`. Its performance measure is `0.25` (see the Section Performance Measure on how to determine it). The second entry describes a tool `toolY.pl` written in `Perl` that performs some processing on `FileType5` and generates `FileType6` and a second output file `FileType9`.
+The first entry describes a tool `toolX.pl` written in `Perl` that performs some processing on `FileType1` and generates `FileType2`, and requires an extra input file `FileType3`. Its performance measure is `0.25` (see the Section Performance Measure on how to determine it). The second entry describes a tool `toolY.pl` written in `Perl` that performs some processing on `FileType5` and generates `FileType6` and a second output file `FileType9`. The third entry describes a tool `toolZ.pl` that performs some processing on `FileType2` and generates file `FileType5` and requires two extra input files, `FileType9` and `FileType8`.
 
 ==Performance Measure==
 
