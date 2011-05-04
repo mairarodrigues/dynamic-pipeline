@@ -3,7 +3,7 @@
 
 = Introduction =
 
-To run the dynamic pipeline project you need: (1) the dynamic pipeline directory structure provided as a .tar file, which includes the dynamic pipeline algorithm (`SetPipeline.class`) and the available pipelines algorithm both written in Java (`AvailablePipelines.class`); (2) a set of tools to be part of the pipeline system, stored in the folder "tools/"; and (3) the tool registry file (`registry/ToolRegistry.txt`) instantiated with information about the tools in "tools/". If you want to access your dynamic pipeline system through a web interface, we provide a sample interface program written in PHP (index.php). Requirements for using the dynamic pipeline project are below. 
+To run the dynamic pipeline project you need: (1) the dynamic pipeline directory structure provided as a .tar file, which includes the dynamic pipeline algorithm (`SetPipeline.class`), the available pipelines algorithm (`AvailablePipelines.class`) and the program to calculate the tools' performance measure (`CalculatePerformance.class`), all written in Java ; (2) a set of tools to be part of the pipeline system, stored in the folder "tools/"; and (3) the tool registry file (`registry/ToolRegistry.txt`) instantiated with information about the tools in "tools/". If you want to access your dynamic pipeline system through a web interface, we provide a sample interface program written in PHP (index.php). Requirements for using the dynamic pipeline project are below. 
 
 = Requirements for the Java Algorithm =
 
@@ -49,7 +49,7 @@ java -cp ":/xxx/dynamicpipeline/java/jgrapht-0.8.1/jgrapht-jdk1.6.jar:/xxx/dynam
 java -cp xxx\dynamicpipeline\java\jgrapht-0.8.1\jgrapht-jdk1.6.jar;xxx\dynamicpipeline\java\ SetPipeline
 }}}
 
-Where "xxx" is the absolute path on your machine. Use the same command for class "`AvailablePipelines`".
+Where "xxx" is the absolute path on your machine. Use the same command for classes `AvailablePipelines` and `CalculatePerformance`.
 
 
 = Requirements for the PHP Interface =
@@ -85,3 +85,5 @@ The `AvailablePipelines` class returns a comma-delimited String of possible end 
 {{{
 PrettyBase,SDAT,PHASE_Format,NEXUS,Structure_Format,R_Genetics,R_Hierfstat
 }}}
+
+The `CalculatePerformance` class returns a number that represents the performance measure. 
