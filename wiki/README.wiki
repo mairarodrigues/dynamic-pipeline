@@ -27,14 +27,14 @@ To run the dynamic pipeline project you need: (1) the dynamic pipeline directory
   All with read+exec+write permissions
 
   * Complementary files:
-  ToolRegistry.txt (on dynamicpipeline/registry/)
+  !ToolRegistry.txt (on dynamicpipeline/registry/)
  
   With read+exec+write permission
 
 
 *ATENTION:* before running the java programs you must 
  # populate the folder "tools/" with the tools you want to include in your pipeline system; and 
- # instantiate the Tool Registry (registry/ToolRegistry.txt) with information about those tools. Read the document on the Wiki section about how to incorporate your tools.
+ # instantiate the Tool Registry (`registry/ToolRegistry.txt`) with information about those tools. Read the document on the Wiki section about how to incorporate your tools.
 
 = How to Run the Java Executables =
 
@@ -48,7 +48,7 @@ java -cp ":/xxx/dynamicpipeline/java/jgrapht-0.8.1/jgrapht-jdk1.6.jar:/xxx/dynam
 java -cp xxx\dynamicpipeline\java\jgrapht-0.8.1\jgrapht-jdk1.6.jar;xxx\dynamicpipeline\java\ SetPipeline
 }}}
 
-Where "xxx" is the absolute path on your machine. Use the same command for class "AvailablePipelines".
+Where "xxx" is the absolute path on your machine. Use the same command for class "`AvailablePipelines`".
 
 
 = Requirements for the PHP Interface =
@@ -62,7 +62,7 @@ Substitute ":" by ";" if you are using Windows. For Linux, no change is needed.
 
 = Outputs =
 
-The SetPipeline class returns the path for four output files, in this order:
+The `SetPipeline` class returns the path for four output files, in this order:
 {{{
 pipeline<timestamp>.inputs
 pipeline<timestamp>.exec
@@ -80,7 +80,7 @@ pipeline<timestamp>.txt
 pipeline<timestamp>.log
 <timestamp>/
 }}}
-The AvailablePipelines class returns a comma-delimited String of possible end points with available paths from a specific start point (or input_format). Example of output, referring to possible conversion formats for the start point format SDAT:
+The `AvailablePipelines` class returns a comma-delimited String of possible end points with available paths from a specific start point (or input_format). Example of output, referring to possible conversion formats for the start point format SDAT:
 {{{
 PrettyBase,SDAT,PHASE_Format,NEXUS,Structure_Format,R_Genetics,R_Hierfstat
 }}}
