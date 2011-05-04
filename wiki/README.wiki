@@ -42,11 +42,11 @@ To run the dynamic pipeline project you need: (1) the dynamic pipeline directory
 Java executables should be run from the "dynamicpipeline/java/" directory. 
  * linux:   
 {{{
-java -cp ":/xxx/dynamicpipeline/java/jgrapht-0.8.1/jgrapht-jdk1.6.jar:/xxx/dynamicpipeline/java/" SetPipeline <args>
+java -cp ":/xxx/dynamicpipeline/java/jgrapht-0.8.1/jgrapht-jdk1.6.jar:/xxx/dynamicpipeline/java/" SetPipeline ...
 }}}
  * windows: 
 {{{
-java -cp xxx\dynamicpipeline\java\jgrapht-0.8.1\jgrapht-jdk1.6.jar;xxx\dynamicpipeline\java\ SetPipeline <args>
+java -cp xxx\dynamicpipeline\java\jgrapht-0.8.1\jgrapht-jdk1.6.jar;xxx\dynamicpipeline\java\ SetPipeline ...
 }}}
 
 Where "xxx" is the absolute path on your machine. Use the same command for classes `AvailablePipelines` and `CalculatePerformance`.
