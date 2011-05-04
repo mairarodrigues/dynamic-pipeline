@@ -6,11 +6,11 @@ To use the dynamic pipeline system you must add your own tools to the system. Th
 
 To add your tools to the dynamic pipeline system you will need to:
  # populate the folder "tools/" with the tools you want to include in your pipeline system; and
- # instantiate the Tool Registry (registry/ToolRegistry.txt) with information about those tools. 
+ # instantiate the Tool Registry (`registry/ToolRegistry.txt`) with information about those tools. 
 
 = The Tool Registry =
 
-All information about the tools that are part of the pipeline system is stored in a data structure called Tool Registry (the registry/ToolRegistry.txt file). Each entry on the registry describes a particular tool with the following attributes:
+All information about the tools that are part of the pipeline system is stored in a data structure called Tool Registry (the `registry/ToolRegistry.txt` file). Each entry on the registry describes a particular tool with the following attributes:
  * the input that it accepts (Input), which can be a file type or format; 
  * the output that it generates (Output), that can also be a file type or format; 
  * its executable name (Tool); 
