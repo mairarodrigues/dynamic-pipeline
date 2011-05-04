@@ -25,7 +25,7 @@ All information about the tools that are part of the pipeline system is stored i
 
 Example:
 ||#INPUT||OUTPUT ||TOOL||LANGUAGE||CODE||DEPENDENCIES||SUBPRODUCTS||PERFORMANCE||OBSERVATIONS||PROVIDER||CONTACT||
-||`FileType1`||`FileType2` ||toolx.pl||Perl||01||!FileType3||-||0.25||-||John Smith||john@mail||
+||!FileType1||!FileType2 ||toolx.pl||Perl||01||!FileType3||-||0.25||-||John Smith||john@mail||
 
 This entry describes a tool `toolx.pl` writen in `Perl` that performs some processing on `FileType1` and generates `FileType2`, and requires an extra input file `FileType3`. Its performance measure is `0.25` (see the Section Performance Measure on how to determine it).
 
