@@ -39,17 +39,21 @@ To run the dynamic pipeline project you need: (1) the dynamic pipeline directory
 
 = How to Run the Java Executables =
 
-Java executables should be run from the "dynamicpipeline/java/" directory. 
+Java executables should be run from the "dynamicpipeline/java/" directory. To define the java classpath, see below: 
  * linux:   
 {{{
-java -cp ":/xxx/dynamicpipeline/java/jgrapht-0.8.1/jgrapht-jdk1.6.jar:/xxx/dynamicpipeline/java/" SetPipeline ...
+":/xxx/dynamicpipeline/java/jgrapht-0.8.1/jgrapht-jdk1.6.jar:/xxx/dynamicpipeline/java/"
 }}}
  * windows: 
 {{{
-java -cp xxx\dynamicpipeline\java\jgrapht-0.8.1\jgrapht-jdk1.6.jar;xxx\dynamicpipeline\java\ SetPipeline ...
+xxx\dynamicpipeline\java\jgrapht-0.8.1\jgrapht-jdk1.6.jar;xxx\dynamicpipeline\java\
 }}}
 
-Where "xxx" is the absolute path on your machine. Use the same command for classes `AvailablePipelines` and `CalculatePerformance`.
+Where "xxx" is the absolute path on your machine. The full command line is as follows:
+
+{{{
+java -cp <classpath> SetPipeline ...
+}}}
 
 
 = Requirements for the PHP Interface =
