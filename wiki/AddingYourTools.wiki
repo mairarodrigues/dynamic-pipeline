@@ -25,15 +25,16 @@ All information about the tools that are part of the pipeline system is stored i
 
 Example:
 ||#INPUT||OUTPUT ||TOOL||LANGUAGE||CODE||DEPENDENCIES||SUBPRODUCTS||PERFORMANCE||OBSERVATIONS||PROVIDER||CONTACT||
-||!FileType1||!FileType2 ||toolx.pl||Perl||01||!FileType3||-||0.25||-||John Smith||john@mail||
+||!FileType1||!FileType2 ||toolX.pl||Perl||01||!FileType3||-||0.25||-||John Smith||john@mail||
+||!FileType5||!FileType6 ||toolY.pl||Perl||02||-||!FileType9||0.92||-||Paul||paul@mail||
 
-This entry describes a tool `toolx.pl` writen in `Perl` that performs some processing on `FileType1` and generates `FileType2`, and requires an extra input file `FileType3`. Its performance measure is `0.25` (see the Section Performance Measure on how to determine it).
+This entry describes a tool `toolX.pl` writen in `Perl` that performs some processing on `FileType1` and generates `FileType2`, and requires an extra input file `FileType3`. Its performance measure is `0.25` (see the Section Performance Measure on how to determine it).
 
 ==Performance Measure==
 
 The performance measure indicates the time that the tool takes to finish its execution. It is used to identify the fastest pipeline, in case there are alternative pipelines for the same task. 
 
-It can be measured in any time unit (hours, minutes, seconds, miliseconds). You should chose one time unit and use the same unit for all measures. In the example above, the performance measure of `toolx.pl` indicates that it takes `0.25` seconds to process inputs `FileType1` and `FileType3` and generate `FileType2`.
+It can be measured in any time unit (hours, minutes, seconds, miliseconds). You should chose one time unit and use the same unit for all measures. In the example above, the performance measure of `toolX.pl` indicates that it takes `0.25` seconds to process inputs `FileType1` and `FileType3` and generate `FileType2`.
 
 Since tools are invoked by the command line, we suggest that you use the unix `time` command to evaluate your tools. 
 
@@ -47,8 +48,8 @@ Each tool in the pipeline (folder "`/tools`") is invoked by a command line call 
 }}}
 where squared brackets represent optional parameters; that is, in case a tool requires extra inputs (represented by the Dependencies attribute in the tool registry) or generates secondary output files (represented by the Subproducts attribute in the tool registry).
 
-In the example above, the algorithm generates a command line call for the tool `toolx.pl` in the format:
+In the example above, the algorithm generates a command line call for the tool `toolX.pl` in the format:
 {{{
-perl toolx.pl File1 File3 File2
+perl toolX.pl File1 File3 File2
 }}}
 The tool developer is the one responsible for setting the correct command line interface for his tool and for describing it correctly in the tool registry. If the tool interface is not correctly described, the algorithm will not be able to invoke the tool. 
