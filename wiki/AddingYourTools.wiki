@@ -41,11 +41,8 @@ Since tools are invoked by the command line, we suggest that you use the unix `t
 
 =Standards for each Tool=
 
+Each tool in the pipeline (folder "`/tools`") is invoked by a command line call with the following format: 
 {{{
-> perl xxx.pl <input> <output>
+<programing language call> <tool executable name> <input file 1> [input file n] <output file 1> [output file n]
 }}}
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+where squared brackets represent optional parameters (that is, in case a tool requires extra inputs or generates secondary output files).
