@@ -1,4 +1,4 @@
-#How to add your own tools to the dynamic pipeline system.
+#summary Instructions for instantiating the dynamic pipeline system with your tools.
 
 = Introduction =
 
