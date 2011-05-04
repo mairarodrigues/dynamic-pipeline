@@ -2,7 +2,7 @@
 
 = Introduction =
 
-To run the dynamic pipeline project you need: (1) the dynamic pipeline directory structure provided as a .tar file, which includes the dynamic pipeline algorithm (SetPipeline) and the available pipelines algorithm both written in Java (AvailablePipelines); (2) a set of tools to be part of the pipeline system, stored in the folder "tools/"; and (3) the tool registry file (registry/ToolRegistry.txt) instantiated with information about the tools in "tools/". If you want to access your dynamic pipeline system through a web interface, we provide a sample interface program written in PHP (index.php). Requirements for using the dynamic pipeline project are below. 
+To run the dynamic pipeline project you need: (1) the dynamic pipeline directory structure provided as a .tar file, which includes the dynamic pipeline algorithm (`SetPipeline.class`) and the available pipelines algorithm both written in Java (`AvailablePipelines.class`); (2) a set of tools to be part of the pipeline system, stored in the folder "tools/"; and (3) the tool registry file (`registry/ToolRegistry.txt`) instantiated with information about the tools in "tools/". If you want to access your dynamic pipeline system through a web interface, we provide a sample interface program written in PHP (index.php). Requirements for using the dynamic pipeline project are below. 
 
 = Requirements for the Java Algorithm =
 
