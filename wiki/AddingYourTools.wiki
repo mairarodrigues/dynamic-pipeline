@@ -47,8 +47,8 @@ Each tool in the pipeline (folder "`/tools`") is invoked by a command line call 
 }}}
 where squared brackets represent optional parameters; that is, in case a tool requires extra inputs (represented by the Dependencies attribute in the tool registry) or generates secondary output files (represented by the Subproducts attribute in the tool registry).
 
-In the example above, the correct command line interface for the tool `toolx.pl` should be:
+In the example above, the algorithm generates a command line call for the tool `toolx.pl` in the format:
 {{{
 perl toolx.pl File1 File3 File2
 }}}
-The tool developer is responsible for setting the correct command line interface for his tools. 
+The tool developer is the one responsible for setting the correct command line interface for his tool and for describing it correctly in the tool registry. If the tool interface is not correctly described, the algorithm will not be able to invoke the tool. 
