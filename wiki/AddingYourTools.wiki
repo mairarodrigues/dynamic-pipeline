@@ -46,3 +46,9 @@ Each tool in the pipeline (folder "`/tools`") is invoked by a command line call 
 <programing language call> <tool executable name> <input file 1> [input file n] <output file 1> [output file n]
 }}}
 where squared brackets represent optional parameters (that is, in case a tool requires extra inputs or generates secondary output files).
+
+In the example above, the correct command line interface for the tool `toolx.pl` should be:
+{{{
+perl toolx.pl File1 File3 File2
+}}}
+The tool developer is responsible for setting the correct command line interface for his tools. 
