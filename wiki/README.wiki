@@ -45,8 +45,9 @@ We provide four programs: (1) the dynamic pipeline algorithm (`SetPipeline.class
 
  * class `AvailablePipelines`: this finds all possible pipelines that receive a particular input and generate some output.
 
- * class `CalculatePerformance`: calculates the performance measure for a tool in the pipeline system. This performance measure is used to select the best pipeline among alternatives. It is calculated based on the tool's execution time for processing one or more inputs, in the form `execution_time/sum(input_size)`
+ * class `CalculatePerformance`: calculates the performance measure for a tool in the pipeline system. This performance measure is used to select the best pipeline among alternatives. It is calculated based on the tool's execution time for processing one or more inputs, in the form `execution_time/sum(input_size)`.
 
+The next section describes how to run each of the Java classes.
 
 = How to Run the Java Executables =
 
