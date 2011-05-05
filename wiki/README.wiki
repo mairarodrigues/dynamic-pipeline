@@ -68,8 +68,7 @@ java -cp <classpath> AvailablePipelines <pipeline_input>
 java -cp <classpath> CalculatePerformance <execution_time> <input_filesize> [<input1_filesize>..<inputN_filesize>]
 }}}
 
-where `execution_time` is the time in seconds that a tool takes to process file `input` (and other required input files `input1..inputN`) and generate some output. 
-
+where `execution_time` is the time, in seconds, that a tool takes to process file `input` (and other required input files `input1..inputN`) and generate some output; and `input_filesize` is the size of the input file, in KB. If the tool requires more than one input file, their individual sizes, in KB, must be included in the command line.  
 
 The java `classpath` is specified as below: 
  * linux:   
