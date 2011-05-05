@@ -1,0 +1,84 @@
+#labels Featured,Phase-Implementation
+#How to use the dynamic-pipeline system.
+
+= Functionalities = 
+
+We provide four programs: (1) the dynamic pipeline algorithm (`SetPipeline.class`) in Java, (2) the available pipelines algorithm (`AvailablePipelines.class`) in Java, (3) the program to calculate the tools' performance measure (`CalculatePerformance.class`) in Java, and (4) a sample web interface for a pipeline system (`index.php`) in PHP. They are briefly explained below:
+
+ * class `SetPipeline`: this implements the dynamic pipeline algorithm that finds a possible pipeline for a given functionality (e.g., converting a format A into format B), and creates an executable code for this pipeline.
+
+ * class `AvailablePipelines`: this finds all outputs that can be reached with pipelines receiving a particular input.
+
+ * class `CalculatePerformance`: calculates the performance measure for a tool in the pipeline system. This performance measure is used to select the best pipeline among alternatives. It is calculated based on the tool's execution time for processing one or more inputs, in the form `execution_time/sum(input_size)`.
+
+The next section describes how to run each of the Java classes.
+
+= How to Run the Java Executables =
+
+Java executables should be run from the "dynamicpipeline/java/" directory. The full command line for each java program is as follows:
+
+ * !SetPipeline.class
+{{{
+java -cp <classpath> SetPipeline <pipeline_input> <pipeline_output> <weight_cr>
+}}}
+where `weight_cr` is the weight criterion to be applied to the graph edges, and it is used by the algorithm to find the best pipeline, in case of alternatives. It can be either `P` (for performance) or `D` (for input dependencies). If you enter `P`, then the choice for the best pipeline is based on its composing tools' performance measures (or their execution times); if you enter `D`, then the choice for the best pipeline is based on the least number of extra inputs for that pipeline.
+
+ * !AvailablePipelines.class
+{{{
+java -cp <classpath> AvailablePipelines <pipeline_input>
+}}}
+ * !CalculatePerformance.class
+{{{
+java -cp <classpath> CalculatePerformance <execution_time> <input_filesize> [<input1_filesize>..<inputN_filesize>]
+}}}
+
+where `execution_time` is the time, in seconds, that a tool takes to process file `input` (and other required input files `input1..inputN`) and generate some output; and `input_filesize` is the size of the input file, in KB. If the tool requires more than one input file, their individual sizes, in KB, must be included in the command line.  
+
+The java `classpath` is specified as below: 
+ * linux:   
+{{{
+":/xxx/dynamicpipeline/java/jgrapht-0.8.1/jgrapht-jdk1.6.jar:/xxx/dynamicpipeline/java/"
+}}}
+ * windows: 
+{{{
+xxx\dynamicpipeline\java\jgrapht-0.8.1\jgrapht-jdk1.6.jar;xxx\dynamicpipeline\java\
+}}}
+
+Where "xxx" is the absolute path on your machine. 
+
+
+= Requirements for the PHP Interface =
+
+  * Configure index.php javaclasspath according to your operating system:
+{{{
+  "$path/jgrapht-0.8.1/jgrapht-jdk1.6.jar:$path"
+}}}
+Substitute ":" by ";" if you are using Windows. For Linux, no change is needed.
+
+
+= Outputs =
+
+The `SetPipeline` class returns the path for four output files, in this order:
+{{{
+pipeline<timestamp>.inputs
+pipeline<timestamp>.exec
+pipeline<timestamp>.outputs
+pipeline<timestamp>.err
+}}}
+OR
+
+There is no available path.
+
+These files are stored in the folder "pipelines/".
+It also generates two other output files and creates a pipeline-specific folder inside the folder "pipelines/":
+{{{
+pipeline<timestamp>.txt
+pipeline<timestamp>.log
+<timestamp>/
+}}}
+The `AvailablePipelines` class returns a comma-delimited String of possible end points that can be reached from a specific start point (or `input_format`). Example of output, referring to possible conversion formats for the start point format SDAT:
+{{{
+PrettyBase,SDAT,PHASE_Format,NEXUS,Structure_Format,R_Genetics,R_Hierfstat
+}}}
+
+The `CalculatePerformance` class returns a number that represents the performance measure. 
