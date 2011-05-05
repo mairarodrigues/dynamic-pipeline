@@ -41,21 +41,23 @@ To run the dynamic pipeline project you need: (1) the dynamic pipeline directory
 
 Java executables should be run from the "dynamicpipeline/java/" directory. The full command line for each java program is as follows:
 
- * SetPipeline.class
+ * !SetPipeline.class
 {{{
-java -cp <classpath> !SetPipeline <pipeline_input> <pipeline_output> <weight_cr>
+java -cp <classpath> SetPipeline <pipeline_input> <pipeline_output> <weight_cr>
 }}}
 where `weight_cr` is the weight criterion to be applied to the graph edges, and it is used by the algorithm to find the best pipeline, in case of alternatives. It can be either `P` (for performance) or `D` (for input dependencies). If you enter `P`, then the choice for the best pipeline is based on its composing tools' performance measures (or their execution times); if you enter `D`, then the choice for the best pipeline is based on the least number of extra inputs for that pipeline.
 
+ * !AvailablePipelines.class
+{{{
+java -cp <classpath> AvailablePipelines <pipeline_input>
+}}}
+ * !CalculatePerformance.class
+{{{
+java -cp <classpath> CalculatePerformance <execution_time> <input_filesize> [<input1_filesize>..<inputN_filesize>]
+}}}
 
- * AvailablePipelines.class
-{{{
-java -cp <classpath> !AvailablePipelines <pipeline_input>
-}}}
- * CalculatePerformance.class
-{{{
-java -cp <classpath> !CalculatePerformance <tool_execution_time> <input_filesize> [<input1_filesize>..<inputN_filesize>]
-}}}
+
+
 
 The java `classpath` is specified as below: 
  * linux:   
