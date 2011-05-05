@@ -41,11 +41,11 @@ To run the dynamic pipeline project you need: (1) the dynamic pipeline directory
 
 We provide four programs: (1) the dynamic pipeline algorithm (`SetPipeline.class`) in Java, (2) the available pipelines algorithm (`AvailablePipelines.class`) in Java, (3) the program to calculate the tools' performance measure (`CalculatePerformance.class`) in Java, and (4) a sample web interface for a pipeline system (`index.php`) in PHP. They are briefly explained below:
 
- # class `SetPipeline`: this implements the dynamic pipeline algorithm that finds a possible pipeline for a given functionality (e.g., converting a format A into format B), and creates an executable code for this pipeline.
+ * class `SetPipeline`: this implements the dynamic pipeline algorithm that finds a possible pipeline for a given functionality (e.g., converting a format A into format B), and creates an executable code for this pipeline.
 
- # class `AvailablePipelines`: this finds all possible transformation pipelines for a particular input.
+ * class `AvailablePipelines`: this finds all possible pipelines that receive a particular input and generate some output.
 
- # class `CalculatePerformance`: calculates the performance measure for a tool in the pipeline system. This performance measure is used to select the best pipeline among alternatives. It is calculated as `response_time/sum(input_size)`
+ * class `CalculatePerformance`: calculates the performance measure for a tool in the pipeline system. This performance measure is used to select the best pipeline among alternatives. It is calculated based on the tool's execution time for processing one or more inputs, in the form `execution_time/sum(input_size)`
 
 
 = How to Run the Java Executables =
