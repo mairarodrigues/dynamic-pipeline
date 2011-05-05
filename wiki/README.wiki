@@ -43,7 +43,7 @@ We provide four programs: (1) the dynamic pipeline algorithm (`SetPipeline.class
 
  * class `SetPipeline`: this implements the dynamic pipeline algorithm that finds a possible pipeline for a given functionality (e.g., converting a format A into format B), and creates an executable code for this pipeline.
 
- * class `AvailablePipelines`: this finds all possible pipelines that receive a particular input and generate some output.
+ * class `AvailablePipelines`: this finds all outputs that can be reached with pipelines receiving a particular input.
 
  * class `CalculatePerformance`: calculates the performance measure for a tool in the pipeline system. This performance measure is used to select the best pipeline among alternatives. It is calculated based on the tool's execution time for processing one or more inputs, in the form `execution_time/sum(input_size)`.
 
