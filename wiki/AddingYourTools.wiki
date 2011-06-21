@@ -45,7 +45,7 @@ To determine the `time` value for your tools, we suggest that you use the Unix "
 
 *Note:* you should use the same machine to determine the `time` value for the tools in your system, since the time that tools take to process will depend on the machine's configuration. Therefore, different configurations will result in a biased performance measure.
 
-=Standards for each Tool=
+=Standard Command Line Format=
 
 Each tool in the pipeline (folder "`/tools`") is invoked by a command line call with the following format: 
 {{{
