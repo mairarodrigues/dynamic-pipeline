@@ -34,9 +34,13 @@ The first entry describes a tool `toolX.pl` written in `Perl` that performs some
 
 ==Performance Measure==
 
-The performance measure indicates the time that the tool takes to finish its execution. It is used to identify the fastest pipeline, in case there are alternative pipelines for the same task. 
+The performance measure indicates the time that the tool takes to finish its execution. It is used to identify the fastest pipeline, in case there are alternative pipelines for the same task. It is calculated as follows:
 
-It can be measured in any time unit (hours, minutes, seconds, milliseconds). You should chose one time unit and use the same unit for all measures. In the example above, the performance measure of `toolX.pl` indicates that it takes `0.25` seconds to process inputs `FileType1` and `FileType3` and generate `FileType2`.
+{{{performance_measure = (time/filesizesum)*10}}}
+
+where `time` is the time the tool took to execute (in seconds), and `filesizesum` is the size of its input file (in KB) (or files, in
+case the tool requires extra input files). The program 
+
 
 Since tools are invoked by the command line, we suggest that you use the Unix `time` command to evaluate your tools. 
 
