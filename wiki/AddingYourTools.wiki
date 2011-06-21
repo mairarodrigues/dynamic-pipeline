@@ -39,12 +39,11 @@ The performance measure indicates the time that the tool takes to finish its exe
 {{{performance_measure = (time/filesizesum)*10}}}
 
 where `time` is the time the tool took to execute (in seconds), and `filesizesum` is the size of its input file (in KB) (or files, in
-case the tool requires extra input files). The program 
+case the tool requires extra input files). You can use the program ` CalculatePerformance` to calculate the performance measure (see the Wiki page User_Manual on how to run this program).
 
+To determine the `time` value for your tools, we suggest that you use the Unix "time" command together with your tools' command line. 
 
-Since tools are invoked by the command line, we suggest that you use the Unix `time` command to evaluate your tools. 
-
-*Note:* you should use the same time unit for all measures and the same or similar input files, when possible (same size or same amount of information). That is, if you evaluate alternative tools with input files of different sizes the measure will be biased. 
+*Note:* you should use the same machine to determine the `time` value for the tools in your system, since the time that tools take to process will depend on the machine's configuration. Therefore, different configurations will result in a biased performance measure.
 
 =Standards for each Tool=
 
