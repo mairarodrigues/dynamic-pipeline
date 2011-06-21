@@ -13,7 +13,7 @@ We provide four programs: (1) the dynamic pipeline algorithm (`SetPipeline.class
 
 The next section describes how to run each of the Java classes.
 
-*ATTENTION:* to go through the next steps you should first setup your dynamic pipeline system according to the Wiki pages README and AddingYourTools. 
+*ATTENTION:* to go through the next steps you should first setup your dynamic pipeline system according to the Wiki pages [http://code.google.com/p/dynamic-pipeline/wiki/README] README and AddingYourTools. 
 
 = How to Run the Java Executables =
 
