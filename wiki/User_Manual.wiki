@@ -13,6 +13,8 @@ We provide four programs: (1) the dynamic pipeline algorithm (`SetPipeline.class
 
 The next section describes how to run each of the Java classes.
 
+*ATTENTION:* to go through the next steps you should first setup your dynamic pipeline system according to the Wiki pages README and AddingYourTools. 
+
 = How to Run the Java Executables =
 
 Java executables should be run from the "dynamicpipeline/java/" directory. The full command line for each java program is as follows:
