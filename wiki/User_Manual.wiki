@@ -11,7 +11,7 @@ We provide five programs: (1) the dynamic pipeline algorithm (`SetPipeline.class
 
  * class `CalculatePerformance`: calculates the performance measure for a tool in the pipeline system. This performance measure is used to select the best pipeline among alternatives. It is calculated based on the tool's execution time for processing one or more inputs, in the form `time/sum(input_size)`.
 
- * class `GraphInspector.class`: provides information about the graph that is created from your tool registry file, such as the indegree and outdegree of the graph nodes.
+ * class `GraphInspector`: provides information about the graph that is created from your tool registry file, such as the indegree and outdegree of the graph nodes.
 
 The next section describes how to run each of the Java classes.
 
