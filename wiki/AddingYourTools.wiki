@@ -62,3 +62,8 @@ perl toolY.pl File5 File6 File9
 perl toolZ.pl File2 File9 File8 File5
 }}}
 The tool developer is the one responsible for setting the correct command line interface for his tool and for describing it correctly in the tool registry. If the tool interface is not correctly described, the algorithm will not be able to invoke the tool. 
+
+=Optimize Graph Connectivity=
+
+You can develop new tools for your dynamic pipeline so that they improve the graph's connectivity, for example, by targeting nodes that are highly connected to others. You can do that by running the `GraphInspector` java executable . It provides information about the graph that is created from your tool registry file, such as the indegree and outdegree of the graph nodes.
+ 
