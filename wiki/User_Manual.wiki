@@ -79,12 +79,16 @@ OR
 There is no available path.
 
 These files are stored in the folder "pipelines/".
-It also generates two other output files and creates a pipeline-specific folder inside the folder "pipelines/":
+
+It also generates three other output files and creates a pipeline-specific folder inside the folder "pipelines/":
 {{{
 pipeline<timestamp>.txt
 pipeline<timestamp>.log
+pipeline<timestamp>.readme
 <timestamp>/
 }}}
+The `.txt` file contains a summary of the pipeline that was generated, the `.log` file contains details about the execution of the algorithm and the `.readme` file contains the observations that should be noticed before running the generated pipeline.
+
 The `AvailablePipelines` class returns a comma-delimited String of possible end points that can be reached from a specific start point (or `input_format`). Example of output, referring to possible conversion formats for the start point format SDAT:
 {{{
 PrettyBase,SDAT,PHASE_Format,NEXUS,Structure_Format,R_Genetics,R_Hierfstat
