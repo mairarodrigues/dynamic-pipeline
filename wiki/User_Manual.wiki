@@ -19,7 +19,7 @@ The next section describes how to run each of the Java classes.
 
 = How to Run the Java Executables =
 
-Java executables should be run from the "dynamicpipeline/java/" directory. The full command line for each java program is as follows:
+Java executables should be run from the "dynamicpipeline/" directory. The full command line for each java program is as follows:
 
  * !SetPipeline.class
 {{{
