@@ -121,3 +121,10 @@ java -cp <path>\dynamicpipeline\java\jgrapht-0.8.1\jgrapht-jdk1.6.jar;<path>\dyn
 }}}
 
 This will return all possible formats that a file in SDAT format can be converted to. That is, it returns the possible outputs that can be reached through a pipeline giving the specific input. 
+
+*Example 3*: the !GraphInspector class.
+{{{
+java -cp <path>\dynamicpipeline\java\jgrapht-0.8.1\jgrapht-jdk1.6.jar;<path>\dynamicpipeline\java\ GraphInspector
+}}}
+
+This will return graph properties such as the number of nodes, the list of nodes, and information of the indegree and outdegree of each node.
