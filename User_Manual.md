@@ -1,0 +1,127 @@
+# Functionalities #
+
+We provide five programs: (1) the dynamic pipeline algorithm (`SetPipeline.class`) in Java, (2) the available pipelines algorithm (`AvailablePipelines.class`) in Java, (3) the program to calculate the tools' performance measure (`CalculatePerformance.class`) in Java, (4) the graph inspector program (`GraphInspector.class`), and (5) a sample web interface for a pipeline system (`index.php`) in PHP. They are briefly explained below:
+
+  * class `SetPipeline`: implements the dynamic pipeline algorithm that finds a possible pipeline for a given functionality (e.g., converting a format A into format B), and creates an executable code for this pipeline.
+
+  * class `AvailablePipelines`: finds all outputs that can be reached with pipelines receiving a particular input.
+
+  * class `CalculatePerformance`: calculates the performance measure for a tool in the pipeline system. This performance measure is used to select the best pipeline among alternatives. It is calculated based on the tool's execution time for processing one or more inputs, in the form `time/sum(input_size)`.
+
+  * class `GraphInspector`: provides information about the graph that is created from your tool registry file, such as the indegree and outdegree of the graph nodes.
+
+The next section describes how to run each of the Java classes.
+
+**ATTENTION:** to go through the next steps you should first setup your dynamic pipeline system according to the Wiki pages [README](http://code.google.com/p/dynamic-pipeline/wiki/README) and AddingYourTools.
+
+# How to Run the Java Executables #
+
+Java executables should be run from the "dynamicpipeline/" directory. The full command line for each java program is as follows:
+
+  * SetPipeline.class
+```
+java -cp <classpath> SetPipeline <pipeline_input> <pipeline_output> <weight_cr>
+```
+where `weight_cr` is the weight criterion to be applied to the graph edges, and it is used by the algorithm to find the best pipeline, in case of alternatives. It can be either `P` (for performance) or `D` (for input dependencies). If you enter `P`, then the choice for the best pipeline is based on its composing tools' performance measures (or their execution times); if you enter `D`, then the choice for the best pipeline is based on the least number of extra inputs for that pipeline.
+
+  * AvailablePipelines.class
+```
+java -cp <classpath> AvailablePipelines <pipeline_input>
+```
+  * CalculatePerformance.class
+```
+java -cp <classpath> CalculatePerformance <execution_time> <input_filesize> [<input1_filesize>..<inputN_filesize>]
+```
+
+where `execution_time` is the time, in seconds, that a tool takes to process file `input` (and other required input files `input1..inputN`) and generate some output; and `input_filesize` is the size of the input file, in KB. If the tool requires more than one input file, their individual sizes, in KB, must be included in the command line.
+
+  * GraphInspector.class
+```
+java -cp <classpath> GraphInspector
+```
+
+The java `classpath` is specified as below:
+  * linux:
+```
+":/xxx/dynamicpipeline/java/jgrapht-0.8.1/jgrapht-jdk1.6.jar:/xxx/dynamicpipeline/java/"
+```
+  * windows:
+```
+xxx\dynamicpipeline\java\jgrapht-0.8.1\jgrapht-jdk1.6.jar;xxx\dynamicpipeline\java\
+```
+
+Where "xxx" is the absolute path on your machine.
+
+
+# Requirements for the PHP Interface #
+
+  * Configure index.php javaclasspath according to your operating system:
+```
+  "$path/jgrapht-0.8.1/jgrapht-jdk1.6.jar:$path"
+```
+Substitute ":" by ";" if you are using Windows. For Linux, no change is needed.
+
+
+# Outputs #
+
+The `SetPipeline` class returns the path for four output files, in this order:
+```
+pipeline<timestamp>.inputs
+pipeline<timestamp>.exec
+pipeline<timestamp>.outputs
+pipeline<timestamp>.err
+```
+OR
+
+There is no available path.
+
+These files are stored in the folder "pipelines/".
+
+It also generates three other output files and creates a pipeline-specific folder inside the folder "pipelines/":
+```
+pipeline<timestamp>.txt
+pipeline<timestamp>.log
+pipeline<timestamp>.readme
+<timestamp>/
+```
+The `.txt` file contains a summary of the pipeline that was generated, the `.log` file contains details about the execution of the algorithm and the `.readme` file contains the observations that should be noticed before running the generated pipeline.
+
+The `AvailablePipelines` class returns a comma-delimited String of possible end points that can be reached from a specific start point (or `input_format`). Example of output, referring to possible conversion formats for the start point format SDAT:
+```
+PrettyBase,SDAT,PHASE_Format,NEXUS,Structure_Format,R_Genetics,R_Hierfstat
+```
+
+The `CalculatePerformance` class returns a number that represents the performance measure.
+
+# Command Line Examples #
+
+We provide a sample tool registry file (`ToolRegistry.txt`) that implements a dynamic pipeline system with format conversion functionalities. The file formats are compatible with popular software programs from the fields of population genetics and genetic epidemiology. You can replace the original `ToolRegistry.txt` file with the sample one to run the examples below.
+
+Note that with this sample tool registry file you can only run the java executables and not the pipelines that are generated by them (the output files .inputs, .exec, and .outputs). That is because to run the generated pipelines you need their composing tools to be in the system (that is, in the `tools/` directory). We do not provide those.
+
+The following examples are for running on windows. For linux users, please change the sintax for the one provided earlier in this manual.
+
+**Example 1**: the SetPipeline class.
+
+```
+java -cp <path>\dynamicpipeline\java\jgrapht-0.8.1\jgrapht-jdk1.6.jar;<path>\dynamicpipeline\java\ SetPipeline SDAT NEXUS P
+```
+
+This will dynamically generate a pipeline that converts a file in format SDAT to format NEXUS using performance (P) as weight criterion. Check the `.exec` file that was generated with the sequence of tools that was combined to provide the required conversion.
+
+You can repeat the command using any format in the INPUT and OUTPUT fields of the registry.
+
+**Example 2**: the AvailablePipelines class.
+
+```
+java -cp <path>\dynamicpipeline\java\jgrapht-0.8.1\jgrapht-jdk1.6.jar;<path>\dynamicpipeline\java\ AvailablePipelines SDAT
+```
+
+This will return all possible formats that a file in SDAT format can be converted to. That is, it returns the possible outputs that can be reached through a pipeline giving the specific input.
+
+**Example 3**: the GraphInspector class.
+```
+java -cp <path>\dynamicpipeline\java\jgrapht-0.8.1\jgrapht-jdk1.6.jar;<path>\dynamicpipeline\java\ GraphInspector
+```
+
+This will return graph properties such as the number of nodes, the list of nodes, and information of the indegree and outdegree of each node.
